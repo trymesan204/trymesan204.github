@@ -1,14 +1,32 @@
 .photo-background{
     display: flex;
     justify-content: center;
-    background-color: #007FFF;
+    background-color: #4166f5;
     color: white;
 }
 
 .photo{
     height: 400px;
     width: 400px;
-    border-radius: 200px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border-radius: 300px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.whole-content{
+    display: flex;
+    justify-content: center;
+}
+
+.main-content{
+    width: 70%;
+}
+
+.introduction{
+    padding: 20px;
+}
+
+.introduction p{
+    font-size: larger;
+    text-align: justify;
 }
