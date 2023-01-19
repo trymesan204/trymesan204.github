@@ -1,0 +1,12 @@
+.navbar{
+    height: 150px;
+}
+
+.container{
+    width: 70%;
+}
+
+.space{
+    width: 35%;
+    justify-content: space-between;
+}

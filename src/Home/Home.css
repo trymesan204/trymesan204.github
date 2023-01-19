@@ -1,0 +1,14 @@
+.photo-background{
+    display: flex;
+    justify-content: center;
+    background-color: #007FFF;
+    color: white;
+}
+
+.photo{
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
