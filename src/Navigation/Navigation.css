@@ -16,7 +16,14 @@
     justify-content: space-between;
 }
 
-.space > a{
-    color: black;
+.space a{
+    padding: 10px;
+    border-radius: 10%;
+    color: gray;
     text-decoration: none;
+}
+
+.space a:hover, a.active{
+    color: black;
+    background-color: #ecedf4;
 }

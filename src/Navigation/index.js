@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import './Navigation.css';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import Home from '../Home';
 import About from '../About';
 import Blog from '../Blog';
@@ -37,10 +37,10 @@ export default class Navigation extends React.Component {
             <div className='navbar'>
               <Navbar.Brand href="/"><b>Sandesh Upadhyaya</b></Navbar.Brand>
               <Nav className="space">
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-                <Link to="/blogs">Blog</Link>
-                <Link to="/projects">Projects</Link>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/blogs">Blogs</NavLink>
+                <NavLink to="/projects">Projects</NavLink>
               </Nav>
             </div>
           </div>
