@@ -1,12 +1,22 @@
-.navbar{
+.sticky-navbar{
+    display: flex;
     height: 150px;
+    position: sticky;
+    top: 0;
+    background-color: white;
 }
 
-.container{
-    width: 70%;
+.navbar{
+    width: 65%;
+    margin: 0 auto;
 }
 
 .space{
     width: 35%;
     justify-content: space-between;
+}
+
+.space > a{
+    color: black;
+    text-decoration: none;
 }

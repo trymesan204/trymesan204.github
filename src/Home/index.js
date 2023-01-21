@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <>
             <div className='photo-background'>
-                <div className='main-content'>
+                <div>
                     <img src={pp} className='photo' alt='I, me and myself'/>
                 </div>
             </div>

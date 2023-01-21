@@ -6,18 +6,19 @@ import About from './About';
 import Blog from './Blog';
 import Projects from './Projects';
 
+
 function App() {
   return (
     <div className="App">
       <Navigation />
-        <BrowserRouter>
+        {/* <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/blogs" element={<Blog />} />
             <Route path="/projects" element={<Projects />} />
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
     </div>
   );
 }

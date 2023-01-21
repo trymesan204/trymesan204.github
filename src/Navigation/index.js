@@ -1,8 +1,13 @@
 import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './Navigation.css';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Home from '../Home';
+import About from '../About';
+import Blog from '../Blog';
+import Projects from '../Projects';
+import { Navbar } from 'react-bootstrap';
+
 
 export default class Navigation extends React.Component {
 
@@ -13,7 +18,7 @@ export default class Navigation extends React.Component {
   resizeHeaderOnScroll(){
     const distanceY = document.body.scrollTop || document.documentElement.scrollTop;
     const shrinkOn = 100;
-    const navBar = document.getElementById("navbar");
+    const navBar = document.getElementById("sticky-navbar");
     console.log(distanceY);
 
     if (distanceY > shrinkOn) {
@@ -27,17 +32,26 @@ export default class Navigation extends React.Component {
 
   render(){
     return (
-      <Navbar id="navbar" className="navbar" sticky="top" bg="white">
-        <Container className="container">
-          <Navbar.Brand href="/"><b>Sandesh Upadhyaya</b></Navbar.Brand>
-          <Nav className="space">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/blogs">Blog</Nav.Link>
-            <Nav.Link href="/projects">Projects</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+        <BrowserRouter>
+          <div id='sticky-navbar' className='sticky-navbar'>
+            <div className='navbar'>
+              <Navbar.Brand href="/"><b>Sandesh Upadhyaya</b></Navbar.Brand>
+              <Nav className="space">
+                <Link to="/">Home</Link>
+                <Link to="/about">About</Link>
+                <Link to="/blogs">Blog</Link>
+                <Link to="/projects">Projects</Link>
+              </Nav>
+            </div>
+          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/blogs" element={<Blog />} />
+            <Route path="/projects" element={<Projects />} />
+          </Routes>
+        </BrowserRouter>
+
     );
   }
 }
